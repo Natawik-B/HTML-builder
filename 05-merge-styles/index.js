@@ -6,7 +6,7 @@ const projectDist = path.join(__dirname, "project-dist");
 
 fs.unlink(path.join(projectDist, "bundle.css"), (err) => {
   if (err) {
-    console.log("No file");
+    console.log("New file (bundle.css) is created in the Project-dist");
   };
 });
 

@@ -5,7 +5,7 @@ const filePath = path.join(__dirname, "data.txt");
 const output = fs.createWriteStream(filePath);
 
 const {stdin, stdout} = process;
-stdout.write("Hello World!");
+stdout.write("Hello! Enter your wishes, please 🐱\n");
 
 stdin.on("data", data => {
   if (data.toString().trim() === "exit") {
