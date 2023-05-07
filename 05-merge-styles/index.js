@@ -19,7 +19,7 @@ fs.readdir(stylesWay, {withFileTypes: true}, (err, allFiles) => {
             .forEach(function(file) {
               let readableStream = fs.createReadStream(path.join(stylesWay, file));
               readableStream.on("data", data => {
-                fs.appendFile(path.join(projectDist, "bundle.css"), data + '\n', err => {
+                fs.appendFile(path.join(projectDist, "bundle.css"), data + '\n\n', err => {
                   if (err) {
                     throw err;
                   };
