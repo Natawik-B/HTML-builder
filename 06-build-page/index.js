@@ -47,7 +47,7 @@ async function makeHTML(source) {
 async function makeCSS(source) {
   let styles = await fs.readdir(source);
   styles = await Promise.all(styles.map(file => fs.readFile(path.join(source, file), "utf-8")));
-  await fs.writeFile(path.join(projectPath, "style.css"), styles.join("\n"));
+  await fs.writeFile(path.join(projectPath, "style.css"), styles.join("\n\n"));
 };
 
 pageAssembly();
