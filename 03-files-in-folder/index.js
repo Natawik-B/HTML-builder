@@ -1,6 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const dirPath = path.join(__dirname, "secret-folder");
+const fs = require('fs');
+const path = require('path');
+const dirPath = path.join(__dirname, 'secret-folder');
 
 function showInfo(file) {
   fs.stat(path.join(dirPath, file.name),
@@ -11,8 +11,8 @@ function showInfo(file) {
       } else {
         console.log(error);
       }
-    })
-  };
+    });
+}
 
 fs.readdir(dirPath, {withFileTypes: true},
   (error, files) => {
@@ -23,6 +23,6 @@ fs.readdir(dirPath, {withFileTypes: true},
         if (file.isFile()) {
           showInfo(file);
         }
-      })
+      });
     }
   });

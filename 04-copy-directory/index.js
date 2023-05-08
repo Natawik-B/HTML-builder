@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 const inputDir = path.join(__dirname, 'files');
 const outputDir = path.join(__dirname, 'files-copy');
@@ -13,7 +13,7 @@ fs.readdir(inputDir, (err, oldFiles) => {
     oldFiles.forEach(oldFile => {
       fs.copyFile(path.join(inputDir, oldFile), path.join(outputDir, oldFile), errorHandler);
     });
-  };
+  }
 });
 
 fs.readdir(outputDir, (err, newFiles) => { 
@@ -30,5 +30,5 @@ fs.readdir(outputDir, (err, newFiles) => {
 function errorHandler(err) {
   if (err) {
     throw err;
-  };
-};
+  }
+}
